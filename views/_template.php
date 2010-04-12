@@ -3,7 +3,7 @@
     <head>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
         <meta content="noindex, nofollow" name="robots" />
-        <title>Rod Library Application</title>
+        <title>Condor</title>
         <?php echo custom_includes(sys()->view); ?>
     </head>
     <body>
