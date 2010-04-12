@@ -5,7 +5,7 @@ ini_set('magic_quotes_gpc', 'off');
 ini_set('magic_quotes_runtime', 'off');
 
 define('SYSTEM_ROOT', dirname(dirname(__FILE__)));
-define('WEB_ROOT', '/sites/app_template'); // NO TRAILING SLASH
+define('WEB_ROOT', '/condor'); // NO TRAILING SLASH
 
 $dir = dirname(__FILE__);
 

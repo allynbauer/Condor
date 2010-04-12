@@ -1,5 +1,9 @@
 <?php
 
+function o($str) {
+   echo $str;
+}
+
 function has_error() {
     return sys()->error_count != 0;
 }

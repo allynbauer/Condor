@@ -1,0 +1,15 @@
+#Uncomment below to throw system into maintainance mode
+#ErrorDocument 403 url/to/error/document/.html
+#Order deny,allow
+#Deny from all
+#Feel Free to add you IP below, to be allowed in during maint mode, space delimited
+#Allow from 134.161.73.52
+
+Options +FollowSymLinks
+IndexIgnore */*
+# Turn on the RewriteEngine
+RewriteEngine On
+#  Rules
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /condor/index.php
