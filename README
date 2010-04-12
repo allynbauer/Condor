@@ -17,3 +17,7 @@ I got some CSS to make this blingier, but you can just try it and see what it ma
 
 This isn't done yet, so don't come crying to me if you download it and it maxes out your credit cards or kills your rabbit or something.
 
+The userdata_app.php file is meant to be where you might add data validation. So if you have a few url parameters and you want to get them from there, you could be all:
+sys()->getData->method('key');
+
+To get yourself validated info. In this way you (ideally) never directly access get or post data without making sure it's validated data.
