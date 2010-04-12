@@ -1,5 +1,5 @@
 <?php
-// (c) 2009 by Allyn Bauer <allyn.bauer@gmail.com>
+
 class FlashHelper {
    function __construct() {
       // flashes need a default array to keep track of existing flashes

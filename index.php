@@ -6,6 +6,8 @@ Date: 2010-02-26 (Fri, 26 Feb 2010)
 =========================================
 */
 
+define('WEB_ROOT', '/condor'); // NO TRAILING SLASH
+
 require_once('lib/init.php');
 
 // process the request URL

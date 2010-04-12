@@ -1,2 +1,19 @@
-Condor is a real, real simple PHP framework.
-So simple, I don't feel like explaining it right now.
+Condor is a simple PHP framework.
+Very simple.
+
+To get it working you gotta change the base routes in two places:
+index.php
+.htaccess
+
+It's pretty obvious.
+
+Make controllers for your stuff. There are a few already, so you can see how it hooks together.
+
+Add a flash message in a controller method like this:
+sys()->flash->|name| = |str|;
+
+Where |name| is anything (notice, error) and |str| is your error messages or whatever. It's all very exciting.
+I got some CSS to make this blingier, but you can just try it and see what it makes and whatever yourself.
+
+This isn't done yet, so don't come crying to me if you download it and it maxes out your credit cards or kills your rabbit or something.
+
