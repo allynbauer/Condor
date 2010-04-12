@@ -47,22 +47,27 @@ class PathManager {
    
    // |route| is the route we're testing matches for
    function match($route) {
-   	$base  = explode('/', CONSTANT('WEB_ROOT'));
+      $base  = explode('/', CONSTANT('WEB_ROOT'));
    	$parts = $this->remove_base_url($route);
       $url   = $this->url;
    
       // this method is supposed to route a controller, so we already know what it is
       array_shift($url);
-      
-   	// handle this match
-   	$params = array();
-   	foreach($parts as $piece) {
-   		$url_part = array_shift($url);
-   		if (strpos($piece, ':') === 0) { // style is ':token'
-   			$params[preg_replace('/:/', '', $piece)] = $url_part;
-   		} elseif($url_part != $piece) {
-   			/* error */
-   		}
+   
+      $params = array();
+   
+      if (count($url) === 1 && $url[0] === '') { // route matches '$controller/' (index action)
+         return $params;
+      }
+   
+      // handle this match
+      foreach($parts as $piece) {
+      $url_part = array_shift($url);
+         if (strpos($piece, ':') === 0) { // style is ':token'
+            $params[preg_replace('/:/', '', $piece)] = $url_part;
+         } elseif($url_part != $piece) {
+            /* error */
+         }
    	}
    	if (!empty($params)) return $params;
    	return FALSE;

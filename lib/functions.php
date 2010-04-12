@@ -1,8 +1,8 @@
 <?php
 
-function o($str) {
-   echo $str;
-}
+function o($str) { echo "$str"; }
+function t($str) { return htmlspecialchars($str); }
+function h($str) { o(t($str)); }
 
 function has_error() {
     return sys()->error_count != 0;

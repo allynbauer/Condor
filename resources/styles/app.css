@@ -1,0 +1,34 @@
+/* @group Flash */
+
+.flash {
+        width: 698px; /* 700 - |border size| */
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1;
+        margin: 4px auto 2px;
+        padding: 4px 0;
+}
+
+.flash.notice {
+        background-color: #bde6ec;
+        border: 1px solid #54686b;
+        color: #54686b;
+}
+
+.flash.error {
+        background-color: #f8674a;
+        color: #4e0d0a;
+        border: 1px solid #5e0d0a;
+}
+
+.flash .xout {
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.flash .xout a {
+    color: gray;
+}
+
+/* @end */
