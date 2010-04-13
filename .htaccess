@@ -3,7 +3,7 @@
 #Order deny,allow
 #Deny from all
 #Feel Free to add you IP below, to be allowed in during maint mode, space delimited
-#Allow from 134.161.73.52
+#Allow from an.exciting.ip.addy
 
 Options +FollowSymLinks
 IndexIgnore */*

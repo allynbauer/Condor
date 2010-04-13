@@ -48,7 +48,7 @@ class PathManager {
    // |route| is the route we're testing matches for
    function match($route) {
       $base  = explode('/', CONSTANT('WEB_ROOT'));
-   	$parts = $this->remove_base_url($route);
+      $parts = $this->remove_base_url($route);
       $url   = $this->url;
    
       // this method is supposed to route a controller, so we already know what it is
