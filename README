@@ -21,3 +21,7 @@ The userdata_app.php file is meant to be where you might add data validation. So
 sys()->getData->method('key');
 
 To get yourself validated info. In this way you (ideally) never directly access get or post data without making sure it's validated data.
+
+
+To Document:
+need htaccess; assumes apache
