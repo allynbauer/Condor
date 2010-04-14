@@ -19,7 +19,8 @@ $flash = new FlashHelper();
 
 // include the needed files
 require_once("$dir/database.php");
-require_once("$dir/functions.php");
+require_once("$dir/library_functions.php");
+require_once("$dir/user_functions.php");
 require_once("$dir/helpers.php");
 require_once("$dir/openstruct.php");
 require_once("$dir/sys.php");

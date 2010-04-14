@@ -1,21 +1,12 @@
 <?php
+/* THIS FILE IS FOR FUNCTIONS THAT THE SYSTEM USES AT A CORE LEVEL.
+ */
 
 // return the contents of a view associated with |name|
 function get_view($name) {
    $path = CONSTANT('SYSTEM_ROOT') . "/views/$name.php";
    if (!file_exists($path)) return FALSE;
    return file_get_contents($path);
-}
-
-// return a string that is custom js or css includes for this |view|, if they exist.
-function custom_includes($view) {
-    $root = CONSTANT('SYSTEM_ROOT');
-    $js_file = "$root/javascript/custom/$view.js";
-    $css_file = "$root/css/custom/$view.css";
-    $returns = '';
-    if (file_exists($js_file))  $returns .= "<script src='javascript/custom/$view.js' type='text/javascript'></script>";
-    if (file_exists($css_file)) $returns .= "<link href='css/custom/$view.css' rel='stylesheet' type='text/css' />";
-    return $returns;
 }
 
 // render the template with the current |view|

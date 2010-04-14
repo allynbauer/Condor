@@ -31,3 +31,14 @@ function include_script($script) {
 function template($name) {
    sys()->_TEMPLATE = "_$name.php";
 }
+
+// return a string that is custom js or css includes for this |view|, if they exist.
+function custom_includes($view) {
+    $root = CONSTANT('SYSTEM_ROOT');
+    $js_file = "$root/javascript/custom/$view.js";
+    $css_file = "$root/css/custom/$view.css";
+    $returns = '';
+    if (file_exists($js_file))  $returns .= "<script src='javascript/custom/$view.js' type='text/javascript'></script>";
+    if (file_exists($css_file)) $returns .= "<link href='css/custom/$view.css' rel='stylesheet' type='text/css' />";
+    return $returns;
+}
