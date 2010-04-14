@@ -30,5 +30,6 @@ $content = '';
 $mappings = array();
 $data = new OpenStruct();
 $_error_count = 0;
+template('template'); // set the default template
 
 ?>

@@ -25,3 +25,10 @@ To get yourself validated info. In this way you (ideally) never directly access 
 
 To Document:
 need htaccess; assumes apache
+purpose of each folder
+how to upgrade
+
+To Do:
+make paths that match a non-existant controller error
+add error page handling
+refactor lib to be only lib y

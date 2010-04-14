@@ -27,6 +27,11 @@ function include_script($script) {
     return "<script src='$path' type='text/javascript'></script>\n";
 }
 
+// allows you to change the template that will be used to render
+function template($name) {
+   sys()->_TEMPLATE = "_$name.php";
+}
+
 // return the contents of a view associated with |name|
 function get_view($name) {
    $path = CONSTANT('SYSTEM_ROOT') . "/views/$name.php";
@@ -63,7 +68,7 @@ function render($path) {
     eval('?>' . sys()->content . '<?');
     sys()->content = ob_get_contents();
     ob_end_clean();
-    require_once(CONSTANT('SYSTEM_ROOT') . '/views/_template.php');
+    require_once(CONSTANT('SYSTEM_ROOT') . '/views/' . sys()->_TEMPLATE);
 }
 
 ?>

@@ -3,11 +3,8 @@
     <head>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
         <title>Condor</title>
-        <!--
-        You could get yourself some css with this:
-        <?php o(include_stylesheet('main')) ?>
-        Similar support for javascript is included.
-        -->
+        <?php o(include_stylesheet('app')) ?>
+        <?php o(include_script('app')) ?>
         <?php echo custom_includes(sys()->view); ?>
     </head>
     <body>
