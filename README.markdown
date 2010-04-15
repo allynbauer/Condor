@@ -10,7 +10,7 @@ is declared in `index.php`.
 
 Sys
 ====================
-Condor uses a simple system for accessing global variables. It lets you get accces to them without having to declare global inside daughter[scopes](http://php.net/manual/en/language.variables.scope.php), or by using the [$GLOBALS](http://www.php.net/manual/en/reserved.variables.globals.php) array.
+Condor uses a simple system for accessing global variables. It lets you get accces to them without having to declare global inside daughter [scopes](http://php.net/manual/en/language.variables.scope.php), or by using the [$GLOBALS](http://www.php.net/manual/en/reserved.variables.globals.php) array.
 It's pretty simple to use; basically, you just pretend like global variables exist in sys() like such:
     
 	sys()->variable = 'Set the variable';
@@ -25,11 +25,9 @@ Usage of sys is not required but I like it as it means avoiding having to state 
 Routes
 ====================
 Condor has a simple controller-level routing system. You can define routes per controller by adding a `$routes` instance variable
-to them. If defined, `$routes` should be an array where keys are the method to call if matched and the values are strings in the format of
-    path/to/:route
-Where the controller is assumed and :name denotes a parameter. These parameters are considered Get parameters and are subsequently handled with the getData validation object.
+to them. If defined, `$routes` should be an array where keys are the method to call if matched and the values are strings in the format of `path/to/:route`, where the controller is assumed and `:name` denotes a parameter. These parameters are considered get parameters and are subsequently handled with the getData validation object.
 
-So for example, if you had a controller called users and wanted to route a user's profile, you could do
+So for example, suppose you had a controller called users and wanted to route a user's profile, you could do
     class UsersController {
 		public $routes = array(
 			'profile' => ':id/profile'
@@ -54,7 +52,7 @@ So, `/WEB_ROOT/app/index` is the same as `/WEB_ROOT`.
 
 Flash
 ====================
-Condor has a simple flash system based on the flash system in Rails. By default css is provided for notice and error, but you can make your own and handle them however.
+Flash here isn't flash as in Adobe's Flash, but flash as in 'I have a swell message that I would like you to see as a result of your actions.' Condor has a simple flash system based on the flash system in Rails. By default css is provided for notice and error, but you can make your own and handle them however.
 
     sys()->flash->error = "Hey, you sucked at something.";
     sys()->flash->notice = "You are awesome!";
@@ -70,7 +68,7 @@ Do and Do Not
 
 Upgrading
 ====================
-In general you can upgrade to new versions of Condor by replacing the system folder in the upgrade with the one you have. Hopefully it will not become necessary to change anything outside of this directory, so upgrading is literally as simple as a drag and drop. That said, on occasion it may become necessary to do more elaborate upgrades. If this happens, all of the upgrades that occur outside the scope of the system folder will be individually documented.
+In general you can upgrade to new versions of Condor by replacing the system folder in the upgrade with the one you have. Hopefully it will not become necessary to change anything outside of this directory, so upgrading is literally as simple as a drag and drop. That said, on occasion the need for a more elaborate upgrade might occur. If this happens, all of the upgrades that occur outside the scope of the system folder will be individually documented.
 
 Be Aware
 ====================
@@ -88,4 +86,4 @@ To Do
 -  fix sys handling of assignment
 -  provide [RESTful](http://en.wikipedia.org/wiki/Representational_State_Transfer) route options
 -  automatic (but optional) GET form URL rewriting based upon routes
--  make sure routes handles last parameter optional
+-  make sure routes handling of last parameter is optional
