@@ -10,8 +10,8 @@ Routes
 ====================
 Condor has a simple flash system based on the flash system in Rails. By default css is provided for notice and error, but you can make your own and handle them however.
 
-`sys()->flash->error = "Hey, you sucked at something.";`
-`sys()->flash->notice = "You are awesome!";`
+`sys()->flash->error = "Hey, you sucked at something.";
+sys()->flash->notice = "You are awesome!";`
 
 Do and Do Not
 ====================
