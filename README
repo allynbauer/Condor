@@ -29,6 +29,4 @@ purpose of each folder
 how to upgrade
 
 To Do:
-make paths that match a non-existant controller error
 add error page handling
-refactor lib to be only lib y
