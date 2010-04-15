@@ -1,32 +1,35 @@
-Condor is a simple PHP framework.
-Very simple.
+What is Condor?
+====================
+Condor is a simple (SIMPLE!) PHP framework. It is designed using MVC - Condor brings the VC, you bring the M. 
 
-To get it working you gotta change the base routes in two places:
-index.php
-.htaccess
+Configuration
+====================
+To get it working you gotta change the base route in the .htaccess file. This allows the system to forward the URL to the routing system to let it do the controller bling stuff.
 
-It's pretty obvious.
+Routes
+====================
+Condor has a simple flash system based on the flash system in Rails. By default css is provided for notice and error, but you can make your own and handle them however.
 
-Make controllers for your stuff. There are a few already, so you can see how it hooks together.
+`sys()->flash->error = "Hey, you sucked at something.";`
+`sys()->flash->notice = "You are awesome!";`
 
-Add a flash message in a controller method like this:
-sys()->flash->|name| = |str|;
+Do and Do Not
+====================
+-  DO       make controllers for your stuff.
+-  DO       change the stuff up in /lib to work for you.
+-  DO       validate your data by adding methods to /lib/userdata_app.php
+-  DO       check out the simple demo that exist.
+-  DO NOT   modify files in /system unless you want to change them everytime you upgrade.
 
-Where |name| is anything (notice, error) and |str| is your error messages or whatever. It's all very exciting.
-I got some CSS to make this blingier, but you can just try it and see what it makes and whatever yourself.
+Be Aware
+====================
+This isn't done yet (or even close to resembling it), so don't come crying to me if you download it and it maxes out your credit cards or kills your rabbit or something.
 
-This isn't done yet, so don't come crying to me if you download it and it maxes out your credit cards or kills your rabbit or something.
-
-The userdata_app.php file is meant to be where you might add data validation. So if you have a few url parameters and you want to get them from there, you could be all:
-sys()->getData->method('key');
-
-To get yourself validated info. In this way you (ideally) never directly access get or post data without making sure it's validated data.
-
-
-To Document:
-need htaccess; assumes apache
+To Document
+====================
 purpose of each folder
 how to upgrade
 
-To Do:
+To Do
+====================
 add error page handling
