@@ -83,7 +83,5 @@ To Document
 To Do
 ====================
 -  add error page handling
--  fix sys handling of assignment
 -  provide [RESTful](http://en.wikipedia.org/wiki/Representational_State_Transfer) route options
 -  automatic (but optional) GET form URL rewriting based upon routes
--  make sure routes handling of last parameter is optional

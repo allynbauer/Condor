@@ -34,7 +34,7 @@ class PathManager {
    
    function remove_base_url($url) {
       $url  = explode('/', $url);
-      $base = explode('/', constant('WEB_ROOT'));
+      $base = explode('/', WEB_ROOT);
       foreach($base as $bit) {
          if ($url[0] == $bit) {
             array_shift($url);
@@ -47,7 +47,7 @@ class PathManager {
    
    // |route| is the route we're testing matches for
    function match($route) {
-      $base  = explode('/', CONSTANT('WEB_ROOT'));
+      $base  = explode('/', WEB_ROOT);
       $parts = $this->remove_base_url($route);
       $url   = $this->url;
    
@@ -79,10 +79,10 @@ class PathManager {
       $route = new OpenStruct();
       
       $controller = array_shift($parts);
-      if ($controller == '') $controller = 'app';
+      if ($controller == '') $controller = DEFAULT_CONTROLLER;
       
       $action = array_shift($parts);
-      if ($action == '') $action = 'index';
+      if ($action == '') $action = DEFAULT_ACTION;
       
       $route->controller = $controller;
       $route->action = $action;
@@ -106,7 +106,7 @@ class PathManager {
    }
    
    function controller_path($name) {
-      return CONSTANT('SYSTEM_ROOT') . "/controllers/$name" . "_controller.php";
+      return SYSTEM_ROOT . "/controllers/$name" . "_controller.php";
    }
    
 }

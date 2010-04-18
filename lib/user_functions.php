@@ -14,16 +14,16 @@ function add_error($txt) {
 }
 
 function image_path($image) {
-   return CONSTANT('WEB_ROOT') . "/resources/images/$image";
+   return WEB_ROOT . "/resources/images/$image";
 }
 
 function include_stylesheet($style) {
-  $path = CONSTANT('WEB_ROOT') . "/resources/styles/$style.css";
+  $path = WEB_ROOT . "/resources/styles/$style.css";
   return "<link href='$path' rel='stylesheet' type='text/css' />\n";
 }
 
 function include_script($script) {
-  $path = CONSTANT('WEB_ROOT') . "/resources/scripts/$script.js";
+  $path = WEB_ROOT . "/resources/scripts/$script.js";
   return "<script src='$path' type='text/javascript'></script>\n";
 }
 
@@ -34,7 +34,7 @@ function template($name) {
 
 // return a string that is custom js or css includes for this |view|, if they exist.
 function custom_includes($view) {
-    $root = CONSTANT('SYSTEM_ROOT');
+    $root = SYSTEM_ROOT;
     $js_file = "$root/javascript/custom/$view.js";
     $css_file = "$root/css/custom/$view.css";
     $returns = '';

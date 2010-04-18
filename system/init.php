@@ -4,9 +4,13 @@
 ini_set('magic_quotes_gpc', 'off');
 ini_set('magic_quotes_runtime', 'off');
 
+define('VERSION', '1.0.1');
 define('SYSTEM_ROOT', dirname(dirname(__FILE__)));
-$__system__ = constant('SYSTEM_ROOT') . '/system';
-$__lib__    = constant('SYSTEM_ROOT') . '/lib';
+define('DEFAULT_CONTROLLER', 'app');
+define('DEFAULT_ACTION', 'index');
+
+$__system__ = SYSTEM_ROOT . '/system';
+$__lib__    = SYSTEM_ROOT . '/lib';
 
 require_once("$__system__/userdata.php");
 require_once("$__lib__/userdata_app.php");
@@ -25,9 +29,9 @@ require_once("$__system__/path_manager.php");
 require_once("$__system__/system_functions.php");
 
 // LIB FILES
-require_once("$__lib__/database.php");
-require_once("$__lib__/user_functions.php");
-require_once("$__lib__/helpers.php");
+foreach(file_list($__lib__) as $file) {
+    require_once($file);
+}
 
 // SYSTEM USE VARIABLES
 $content = '';                // content to render

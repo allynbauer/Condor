@@ -16,4 +16,9 @@ try {
     die();
 }
 
+unset($hostname);
+unset($username);
+unset($password);
+unset($database);
+
 ?>

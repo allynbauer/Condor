@@ -7,6 +7,8 @@ class AppController {
    );
    
    function index() {
+       sys()->test = 'hi';
+       sys()->data->test = sys()->test;
    }
    
    function sweet($params) {
