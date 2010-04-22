@@ -5,7 +5,7 @@ Condor is a real **simple** PHP framework. It is designed using [MVC](http://en.
 Configuration
 ====================
 To get it working you gotta change the base route in the [.htaccess](http://en.wikipedia.org/wiki/Htaccess) file. This allows the system to forward the URL to the routing system to let it do the controller bling stuff. I have found some situations prevent the
-setting of the WEB_ROOT constant correctly. In these situations it will become neccessary for you to set them manually. This constant
+setting of the WEB_ROOT constant correctly. In these situations it will become necessary for you to set them manually. This constant
 is declared in `index.php`.
 
 Sys
@@ -20,7 +20,7 @@ This is how you might gain access to the database [PDO](http://php.net/manual/en
 So, to get access to it you can just do:
     sys()->db->whatever;
 
-Usage of sys is not required but I like it as it means avoiding having to state my intentions to use global variables.
+Usage of sys is not required, but it is convenient as a means of setting global variables and accessing their contents easily.
 
 Routes
 ====================
@@ -52,7 +52,7 @@ So, `/WEB_ROOT/app/index` is the same as `/WEB_ROOT`.
 
 Flash
 ====================
-Flash here isn't flash as in Adobe's Flash, but flash as in 'I have a swell message that I would like you to see as a result of your actions.' Condor has a simple flash system based on the flash system in Rails. By default css is provided for notice and error, but you can make your own and handle them however.
+Flash here isn't flash as in Adobe's Flash, but flash as in 'I have a swell message that I would like you to see as a result of your actions.' Condor has a simple flash system based on the flash system in Rails. By default css is provided for notice and error, but you can make your own and handle them however you wish.
 
     sys()->flash->error = "Hey, you sucked at something.";
     sys()->flash->notice = "You are awesome!";
@@ -62,7 +62,7 @@ Do and Do Not
 -  **DO**       make controllers for your stuff.
 -  **DO**       change the stuff up in /lib to work for you.
 -  **DO**       validate your data by adding methods to /lib/userdata_app.php
--  **DO**       check out the simple demo that exist.
+-  **DO**       check out the simple demo provided and see how it fits together
 -  **DO NOT**   modify files in /system unless you want to change them everytime you upgrade.
 -  **DO NOT**   create variables that start with an underscore - these may interfere with Condor's system components.
 
@@ -79,6 +79,8 @@ To Document
 -  purpose of each folder
 -  alternative templates
 -  alternative view renders
+-  provided js/css (assumption of jquery)
+-  provided functions
 
 To Do
 ====================
