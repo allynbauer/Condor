@@ -1,10 +1,18 @@
 <?php
-
+/**
+ * Initialize the system.
+ * 
+ * @package Condor
+ * @subpackage System
+ * @author Allyn Bauer <allyn.bauer@gmail.com>
+ *
+ */
+ 
 //Turn magic quotes off!
 ini_set('magic_quotes_gpc', 'off');
 ini_set('magic_quotes_runtime', 'off');
 
-define('VERSION', '1.0.1');
+define('VERSION', '1.0.2');
 define('SYSTEM_ROOT', dirname(dirname(__FILE__)));
 define('DEFAULT_CONTROLLER', 'app');
 define('DEFAULT_ACTION', 'index');
@@ -36,7 +44,8 @@ foreach(file_list($__lib__) as $file) {
 // SYSTEM USE VARIABLES
 $content = '';                // content to render
 $data = new OpenStruct();     // data mapped to rendering view
-$_error_count = 0;            // count of fatal app errors
 template('template');         // set the default template
+
+init($_SERVER['REQUEST_URI']);
 
 ?>

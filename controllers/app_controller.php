@@ -14,4 +14,8 @@ class AppController {
    function sweet($params) {
       sys()->content = "URL Parameters for AppController#sweet ['{$params['arg']}', '{$params['arg2']}']";
    }
+   
+   function error2() {
+       fatal('Fake error!', 501);
+   }
 }

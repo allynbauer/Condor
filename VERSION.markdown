@@ -1,3 +1,9 @@
+1.0.2
+====================
+- Added comments to all `/system` classes and functions
+- Added error handling
+- Moved some output handlers to `/system` from `/lib`
+
 1.0.1
 ====================
 - Added a VERSION constant to `system/init.php`

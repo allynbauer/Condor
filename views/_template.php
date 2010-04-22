@@ -5,7 +5,6 @@
         <title>Condor</title>
         <?php o(include_stylesheet('app')) ?>
         <?php o(include_script('app')) ?>
-        <?php echo custom_includes(sys()->view); ?>
     </head>
     <body>
     <div id='content'>

@@ -1,4 +1,13 @@
 <?php
+/**
+ * UserData validation class.
+ * 
+ * @package Condor
+ * @subpackage System
+ * @author Johannes Ullrich, Ph.D. < @link http://johannes.homepc.org/resume.htm >
+ *
+ */
+ 
 class userdata {
 	protected $_aMethods=array('GET','POST','REQUEST','COOKIE','SESSION');
 	protected $_aData=array();
