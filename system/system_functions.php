@@ -26,6 +26,7 @@ function init($url) {
     }
 
     $action = $route->action;
+    sys()->getData->add($route->params);
     $instance->$action($route->params);
     render($route);
 }
