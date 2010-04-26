@@ -215,6 +215,16 @@ function template($name) {
 }
 
 /**
+ * Render with this $action instead of the default one.
+ *
+ * @param string $action
+ * @return void
+ */
+function render_action($action) {
+    sys()->_ACTION = $action;
+}
+
+/**
  * Render the template with the current view.
  *
  * @see template()
@@ -223,6 +233,7 @@ function template($name) {
  * @return void
  */
 function render($path) {
+   if (isset(sys()->_action)) $path->action = sys()->_action;
     $view = $path->controller . '/' . $path->action;
     sys()->_view = $view;
     $template = get_view($view);
